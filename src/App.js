@@ -10,7 +10,7 @@ function App() {
 
 
   useEffect(async function handleNextButton() {
-       const quoteData = await getRandomQuote();
+    const quoteData = await getRandomQuote();
       setQuote({content: quoteData.content,
                 author: quoteData.author})},
   []);
