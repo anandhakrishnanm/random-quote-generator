@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Courgette&family=Raleway:wght@100&display=swap');
+$quote-outter-box-color: #cc7000;
+$quote-inner-box-color: green;
+$box-length: 67vh;
+$mob-box-length-inner: 100vw;
+$mob-box-length-outter: 95vw;
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app{
+    width: 100vw;
+    height: 100vh;
+    @include flex-center();
+ 
+}
+.quote-box-outter{
+    width: $box-length;
+    height: $box-length;
+    background-color: $quote-outter-box-color;
+    color: white;
+    transform: rotate(45deg);
+    @include flex-center();
+    border: 3px dotted rgb(255, 136, 0);
+
+}
+.quote-box-inner{
+    width: $box-length;
+    height: $box-length;
+    background-color: $quote-inner-box-color;
+    transform: rotate(-45deg);
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px dotted rgb(182, 182, 182);
+    box-shadow: 0 8px 6px -6px green,0 8px 6px -6px rgb(38, 211, 38);
+
+}
+.quote-content{
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    text-align: justify;
+    margin-top: 20px;
+}
+.quote-author{
+    font-family: 'Courgette', cursive;
+    text-align: right;
+    margin: 10px auto;
+    font-size: 1.5rem;
+}
+.quote-button-wrapper{
+    position: absolute;
+    top: 80%;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.btn{
+    color: white;
+    border-radius: 4px;
+    width: 8rem;
+    height: 2rem;
+    padding: 4px;
+    background-color: $quote-outter-box-color;
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    border: 2px dotted rgb(255, 136, 0);
+
+}
+@media screen and (max-width:600px){
+    .quote-box-outter{
+        transform: rotate(0deg);
+        width: $mob-box-length-outter;
+        border: none;
+    }
+    .quote-box-inner{
+        transform: rotate(0deg);
+        width: $mob-box-length-inner;
+        border: 6px solid $quote-outter-box-color;
+        box-shadow: 0 8px 6px -6px $quote-outter-box-color;
+    }
+    .tweet-button{
+        margin-left: 30px;
+    }
+    body{
+        background-color: $quote-outter-box-color;
+    }
+    .btn{
+        width: 6rem;
+    }
+}
