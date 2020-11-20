@@ -9,7 +9,10 @@ function App() {
   const [response, setQuote] = useState({content:"Loding...",author:"..."})
 
 
-  useEffect(() => {handleNextButton();},
+  useEffect(async function handleNextButton() {
+       const quoteData = await getRandomQuote();
+      setQuote({content: quoteData.content,
+                author: quoteData.author})},
   []);
 
 
