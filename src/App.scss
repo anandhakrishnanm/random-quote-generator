@@ -2,7 +2,7 @@
 $quote-outter-box-color: #cc7000;
 $quote-inner-box-color: green;
 $box-length: 67vh;
-$mob-box-length-inner: 100vw;
+$mob-box-length-inner: 100%;
 $mob-box-length-outter: 95vw;
 
 @mixin flex-center{
@@ -23,7 +23,6 @@ $mob-box-length-outter: 95vw;
     color: white;
     transform: rotate(45deg);
     @include flex-center();
-    border: 3px dotted rgb(255, 136, 0);
 
 }
 .quote-box-inner{
@@ -34,8 +33,6 @@ $mob-box-length-outter: 95vw;
     flex-direction: column;
     padding: 30px;
     border-radius: 20px;
-    border: 2px dotted rgb(182, 182, 182);
-    box-shadow: 0 8px 6px -6px green,0 8px 6px -6px rgb(38, 211, 38);
 
 }
 .quote-content{
@@ -67,7 +64,6 @@ $mob-box-length-outter: 95vw;
     outline: none;
     border: none;
     font-size: 1.3rem;
-    border: 2px dotted rgb(255, 136, 0);
 
 }
 @media screen and (max-width:600px){
