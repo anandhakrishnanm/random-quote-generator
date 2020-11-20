@@ -39,7 +39,7 @@ function App() {
           <div className="quote-button-wrapper">
             <button className="next-button btn" onClick={handleNextButton}>Next</button>
             <a href={`https://twitter.com/intent/tweet?text=${response.content}`}
-             target="_blank">
+             target="_blank" rel="noreferrer">
                <button className="tweet-button btn">Tweet</button>
             </a>
          </div>
